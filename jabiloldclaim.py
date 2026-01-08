@@ -17,7 +17,7 @@ st.markdown(
 - **Timecard**: must include **Emp No**, **Name**, **Date**, and **one IN + one OUT** column.  
 - A workday counts **1** if **daily hours ≥ (hours per day − grace)** and **not on leave**.
 - Eligibility window: **JOIN_DATE → JOIN_DATE + 3 months − 1 day**
-- Claim cycle: **24th → 26th of the next month**
+- Claim cycle: **24th → 23rd of the next month**
 """
 )
 
@@ -241,5 +241,6 @@ if att_file and mst_file:
         st.exception(e)
 else:
     st.info("Upload both files to continue.")
+
 
 
