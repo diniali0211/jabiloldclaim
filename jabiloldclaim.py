@@ -89,7 +89,7 @@ def claim_cycle_info(d):
         start = d.replace(day=24)
     else:
         start = (d - pd.DateOffset(months=1)).replace(day=24)
-    end = (start + pd.DateOffset(months=1)).replace(day=26)
+    end = (start + pd.DateOffset(months=1)).replace(day=23)
     return f"{start.date()}_to_{end.date()}", start, end
 
 
@@ -241,4 +241,5 @@ if att_file and mst_file:
         st.exception(e)
 else:
     st.info("Upload both files to continue.")
+
 
